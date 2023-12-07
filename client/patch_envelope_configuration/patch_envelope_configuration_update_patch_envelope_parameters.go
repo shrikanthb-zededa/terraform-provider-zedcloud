@@ -14,6 +14,7 @@ import (
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
+	"github.com/zededa/terraform-provider/models"
 )
 
 // NewPatchEnvelopeConfigurationUpdatePatchEnvelopeParams creates a new PatchEnvelopeConfigurationUpdatePatchEnvelopeParams object,
@@ -68,7 +69,7 @@ type PatchEnvelopeConfigurationUpdatePatchEnvelopeParams struct {
 	XRequestID *string
 
 	// Body.
-	Body PatchEnvelopeConfigurationUpdatePatchEnvelopeBody
+	Body *models.PatchEnvelope
 
 	/* ID.
 
@@ -141,13 +142,13 @@ func (o *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams) SetXRequestID(xReq
 }
 
 // WithBody adds the body to the patch envelope configuration update patch envelope params
-func (o *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams) WithBody(body PatchEnvelopeConfigurationUpdatePatchEnvelopeBody) *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams {
+func (o *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams) WithBody(body *models.PatchEnvelope) *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the patch envelope configuration update patch envelope params
-func (o *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams) SetBody(body PatchEnvelopeConfigurationUpdatePatchEnvelopeBody) {
+func (o *PatchEnvelopeConfigurationUpdatePatchEnvelopeParams) SetBody(body *models.PatchEnvelope) {
 	o.Body = body
 }
 
